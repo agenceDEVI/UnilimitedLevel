@@ -19,6 +19,15 @@ public class MainMenu : MonoBehaviour
   FindObjectOfType<AudioManager>().Play("MainMusic");
  }
  
+	public void Options ()
+	{
+		FindObjectOfType<AudioManager>().Play("ButtonSound");
+		
+		
+		
+	
+	}
+ 
  public void QuitGame ()
  {
   FindObjectOfType<AudioManager>().Play("ButtonSound");
