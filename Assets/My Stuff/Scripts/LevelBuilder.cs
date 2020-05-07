@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LevelBuilder : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class LevelBuilder : MonoBehaviour
 	public WanderIA wanderIA;
 	public GameObject LoadingScreen;
 	public GameObject LoadingCamera;
+	public NavMeshSurface surface;
 
 	List<Doorway> availableDoorways = new List<Doorway> ();
 
@@ -67,13 +69,15 @@ public class LevelBuilder : MonoBehaviour
 		player.transform.rotation = startRoom.playerStart.rotation;
 		player.controller.enabled = true;
 		Debug.Log ("Player Placed");
-		
+
 		//Place Ennemy 
 		ennemy = Instantiate (wanderIA) as WanderIA;
 		
 		ennemy.transform.position = endRoom.iaSpawn.position;
 		ennemy.transform.rotation = endRoom.iaSpawn.rotation;
-		
+
+		// Build NavMesh
+		surface.BuildNavMesh(); 
 		
 		
 		LoadingCamera.SetActive(false);

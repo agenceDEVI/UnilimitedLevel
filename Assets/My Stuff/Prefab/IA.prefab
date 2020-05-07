@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1794889479707995498}
   - component: {fileID: 6617626145321114073}
   - component: {fileID: 352502845948444763}
-  - component: {fileID: 6550242259585024626}
-  m_Layer: 0
+  - component: {fileID: 4160711470513641328}
+  m_Layer: 9
   m_Name: IA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50e8fa9b16322d944a4ac63322b37b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
-  rotSpeed: 100
---- !u!195 &6550242259585024626
+  wanderRadius: 50
+  wanderTimer: 5
+--- !u!195 &4160711470513641328
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
